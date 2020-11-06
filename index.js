@@ -23,7 +23,7 @@ app.use("/api", apiController);
 /**
  * Renders home page while passing in the URLs directs to home page.
  */
-app.get("/", async (_req, res) => {
+app.get("/", async(_req, res) => {
     const urlTable = await shortUrl.getAllUrls();
 
     return res.render("index", {
